@@ -9,7 +9,13 @@ def calculateFuel(mass):
     return mass/3 - 2
 
 # For each of the lines in the input
-# Add fuel calculation on to sum
+file = open('input.txt', 'r')
+if file.mode == 'r':
+    for line in file:
+        # Add fuel calculation on to sum
+        sumTotalFuelReqs += calculateFuel(int(line))
+
+print(sumTotalFuelReqs)
 
 # Tests using example data
 # print(calculateFuel(12) == 2)
