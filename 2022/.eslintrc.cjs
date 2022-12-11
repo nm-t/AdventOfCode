@@ -4,6 +4,11 @@ module.exports = {
     es2021: true
   },
   extends: 'standard',
+  globals: {
+    describe: 'readonly',
+    test: 'readonly',
+    expect: 'readonly'
+  },
   overrides: [],
   parserOptions: {
     ecmaVersion: 'latest',
